@@ -47,7 +47,6 @@ The system generates two main output files:
 - Python 3.x
 - OpenAI API
 - pdf2image
-- [Other dependencies would be listed here]
 
 ## Project Structure
 .
