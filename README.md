@@ -2,7 +2,7 @@
 
 ## Objective
 
-This project aims to automate the process of extracting questions and answers from actuarial exam PDFs and their corresponding solution PDFs. The main goals are:
+This project aims to automate the process of extracting questions and answers from actuarial exam PDFs and their corresponding solution PDFs. The exams and solutions are typically published across various PDF files, typically dividing out the multiple choice sections from the written answer sections as well as the answer sheets from the question sheets. The main goals are:
 
 1. Convert exam and solution PDFs into images.
 2. Identify and categorize different types of questions (multiple-choice and written answer).
