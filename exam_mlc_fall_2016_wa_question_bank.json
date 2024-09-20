@@ -1,0 +1,884 @@
+{
+  "exam_info": {
+    "exam_name": "Exam MLC",
+    "exam_year": "Fall 2016",
+    "exam_section": ""
+  },
+  "questions": [
+    {
+      "question": {
+        "question_id": "1",
+        "question_type": "Written answer",
+        "parts": [
+          {
+            "part_id": "a",
+            "given_data": [
+              {
+                "statement": "For all states i and j, and for all ages x \\geq 0, \\, {_t p^ {ij} _ {x}} is a differentiable function of t, and for i \\neq j: \\\\\n\\mu ^ {ij} _ {x} = \\lim_ {h \\to 0+} \\frac{_h p^ {ij} _ {x}}{h}"
+              }
+            ],
+            "problem_statement": "Define the symbols \\, {_t p^ {00} _ {x}} and \\, {_t \\, \\overline{p}^ {00} _ {x}} , and explain why these probabilities are not equal for this model."
+          },
+          {
+            "part_id": "b",
+            "given_data": [
+              {
+                "statement": "The probability \\, { _ {t+h} p^ {00} _ {x}} can be expressed as \\\\\n _ {t+h} p^ {00} _ {x} = _t p^ {00} _ {x} \\, { \\overline{p}^ {00} _ {h}} _ {x+t} + _t p^ {01} _ {x} \\, { p^ {10} _ {h}} _ {x+t} . Use this equation to derive the Kolmogorov forward differential equation for \\, {_t p^ {00} _ {x}} ."
+              }
+            ],
+            "problem_statement": "Use this equation to derive the Kolmogorov forward differential equation for \\, {_t p^ {00} _ {x}}."
+          },
+          {
+            "part_id": "c",
+            "given_data": [
+              {
+                "statement": "\\mu^ {01} _ {x+t} = 0.5, \\, for \\, all \\, t \\\\\n\\mu^ {02} _ {x+t} = k t, \\, for \\, all \\, t \\\\\n_{2} p^ {00} _ {x} = 0.165"
+              }
+            ],
+            "problem_statement": "Calculate k."
+          }
+        ]
+      },
+      "solution": {
+        "parts": [
+          {
+            "part_id": "a",
+            "step_by_step_guide": [
+              {
+                "step": "_t p^ {00} _ {x} is the probability that a life who is currently age x and in State 0 is also in State 0 in t years, at age x + t."
+              },
+              {
+                "step": "_t\\overline{p}^{00}_x is the probability that a life who is currently age x and in State 0 remains in State 0 throughout the following t years."
+              },
+              {
+                "step": "In the model shown, these probabilities are not the same because backward transitions between State 1 and State 0 are admitted, so the first probability, \\, { _t p^ {00} _ {x}}, includes the possibility that (x) leaves State 0 and then returns to it in the period (0,t), while the second does not."
+              }
+            ],
+            "final_answer": {
+              "value": "N/A"
+            }
+          },
+          {
+            "part_id": "b",
+            "step_by_step_guide": [
+              {
+                "step": "_{t+h} p^{00}_x = _t p^{00}_x \\overline{p}^{00}_{h \\, {x+t}} + _t p^{01}_x \\overline{p}^{10}_{h \\, {x+t}}"
+              },
+              {
+                "step": "= _t p^{00}_x \\left( 1 - \\left( (\\mu^{01}_{x+t}+\\mu^{02}_{x+t})h \\right) \\right) + _t p^{01}_x \\overline{p}^{10}_{h \\, x+t}"
+              },
+              {
+                "step": "\\Rightarrow  _{t+h} p^{00}_x - _t p^{00}_x = _t p^{00}_x (\\mu^{01}_{x+t} + \\mu^{02}_{x+t}) h + _t p^{01}_x \\overline{p}^{10}_{h \\, x+t}"
+              },
+              {
+                "step": "\\Rightarrow \\lim_{h \\to 0+} \\frac{_{t+h}\\overline{p}^{00}_x - _{t}\\overline{p}^{00}_x}{h}"
+              },
+              {
+                "step": "\\Rightarrow \\lim_{h \\to 0+} =  \\lim_{h \\to 0+} \\left( p^{01}_{x+h} \\frac{_h\\overline{p}^{10}_{x+h}}{h} - _t p^{00}_{x} \\left( \\frac{\\overline{p}^{01}_{t,x+t} - \\overline{p}^{00}_{t+h, x+t}}{h}\\right) \\right)"
+              },
+              {
+                "step": "\\Rightarrow \\frac{d}{dt} _t p^{00}_x  = _t p^{01}_x \\mu^{01}_{x+t} \\overline{p}^{10}_{x+t} - _t p^{00}_x \\left( \\mu^{01}_{x+t} + \\mu^{02}_{x+t} \\right)"
+              }
+            ],
+            "final_answer": {
+              "value": "\\frac{d}{dt} _t p^{00}_x  = _t p^{01}_x \\mu^{01}_{x+t} \\overline{p}^{10}_{x+t} - _t p^{00}_x \\left( \\mu^{01}_{x+t} + \\mu^{02}_{x+t} \\right)"
+            }
+          },
+          {
+            "part_id": "c",
+            "step_by_step_guide": [
+              {
+                "step": "_{2} p^{00}_{x} = 0.165 = \\exp \\left\\{ - \\int_{0}^{2} \\mu^{01}_{x+t} + \\mu^{02}_{x+t} \\, dt \\right \\}"
+              },
+              {
+                "step": "= \\exp \\left\\{ - \\int_{0}^{2} (0.5 + kt \\, dt) \\right \\}"
+              },
+              {
+                "step": "= \\exp \\left\\{-(1+2k)\\right\\}"
+              },
+              {
+                "step": "\\Rightarrow - \\log(0.165) = 1 + 2k"
+              }
+            ],
+            "final_answer": {
+              "value": "k = 0.400905"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "question": {
+        "question_id": "2",
+        "question_type": "Written answer",
+        "parts": [
+          {
+            "part_id": "a",
+            "given_data": [
+              {
+                "statement": "SoA Life simultaneously sells N two-year joint life term insurance policies, each with a death benefit of 10,000 payable at the end of the year of death of the first death. The ages at issue are 65 and 70. The premiums are payable annually during the term of the policy."
+              },
+              {
+                "statement": "The future lifetimes are independent."
+              },
+              {
+                "statement": "q_{65+t} = 0.05 + 0.01t, \\text{ for } t = 0,1,2,...,10"
+              },
+              {
+                "statement": "The spot rates are stochastic with the following distribution: \\begin{array}{|c|c|c|c|} \\hline \\text{Scenario Number} & \\text{Probability} & \\text{One Year Spot Rate} & \\text{Two Year Spot Rate} \\\\ \\hline 1 & 0.40 & 0.05 & 0.06 \\\\ \\hline 2 & 0.60 & 0.05 & 0.07 \\\\ \\hline \\end{array}"
+              },
+              {
+                "statement": "The annual premium per policy, P, is calculated using the equivalence principle."
+              }
+            ],
+            "problem_statement": "Show that P is 1400 to the nearest 100. You should calculate P to the nearest 1."
+          },
+          {
+            "part_id": "b",
+            "given_data": [
+              {
+                "statement": "L_{0,j} is the loss-at-issue random variable for the j^{th} insurance policy."
+              }
+            ],
+            "problem_statement": "(i) Calculate the expected value and variance of L_{0,j} given that the spot rates follow scenario 1. (ii) Calculate the expected value and variance of L_{0,j} given that the spot rates follow scenario 2."
+          },
+          {
+            "part_id": "c",
+            "given_data": [],
+            "problem_statement": "Express Var[L] in terms of N."
+          },
+          {
+            "part_id": "d",
+            "given_data": [],
+            "problem_statement": "Demonstrate mathematically that the interest rate risk in these policies is not diversifiable."
+          },
+          {
+            "part_id": "e",
+            "given_data": [],
+            "problem_statement": "Briefly explain why the interest rate risk in these policies is not diversifiable."
+          }
+        ]
+      },
+      "solution": {
+        "parts": [
+          {
+            "part_id": "a",
+            "step_by_step_guide": [
+              {
+                "step": "Let v(t) denote the discount function: v(1) = v_{5%} under both scenarios"
+              },
+              {
+                "step": "v(2) = \\begin{cases} v_{6%}^2 & \\text{Scenario 1} \\\\ v_{7%}^2 & \\text{Scenario 2} \\end{cases}"
+              },
+              {
+                "step": "Also p_{65:70} = 0.85500, \\\\ 1q_{65:70} = 1 - p_{65:70} = 0.145, \\\\ and \\\\ 1|1q_{65:70} = p_{65:70}p_{76:70} = 0.85500 - 0.71529 = 0.13971"
+              },
+              {
+                "step": "The EPVs of premiums and benefits are as follows, where Sc.1 refers to Scenario 1, and Sc.2 to Scenario 2."
+              },
+              {
+                "step": "EPV Premiums = P(1 + p_{65:70} v(1)) = 1.81429P"
+              },
+              {
+                "step": "EPV Benefits|Sc.1 = 10 000 (q_{65:70} v_{5%} + 1|1 q_{65:70} v_{6%^2}) = 2624.3"
+              },
+              {
+                "step": "EPV Benefits|Sc.2 = 10 000 (q_{65:70} v_{5%} + 1|1 q_{65:70} v_{7%^2}) = 2601.2"
+              },
+              {
+                "step": "=> EPV Benefits = 0.4(2624.3) + 0.6(2601.2) = 2610.5"
+              },
+              {
+                "step": "=> P = \\frac{2610.5}{1.81429} = 1438.82"
+              }
+            ],
+            "final_answer": {
+              "value": "P \\approx 1400"
+            }
+          },
+          {
+            "part_id": "b",
+            "step_by_step_guide": [
+              {
+                "step": "In terms of the discount function v(t), we have \\\\ L_{0,j} = \\begin{cases} 10 000 v(1) - P & \\text{w.p. } q_{65:70} \\\\ 10 000 v(2) - P(1+v(1)) & \\text{w.p. } 1|1q_{65:70} \\\\ -P(1+v(1)) & \\text{w.p. } 2p_{65:70} \\end{cases}"
+              },
+              {
+                "step": "L_{0,j}|Sc.1 = \\begin{cases} 8085.0 & \\text{w.p. } 0.14500 \\\\ 6090.1 & \\text{w.p. } 0.13971 \\\\ -2809.2 & \\text{w.p. } 0.71529 \\end{cases}"
+              },
+              {
+                "step": "which gives \\\\ E[L_{0,j}|Sc.1] = 8085.0 (0.145) + 6090.1 (0.13971) - 2809.2 (0.71529) \\\\ = 13.88"
+              },
+              {
+                "step": "Var[L_{0,j}|Sc.1] = 8085.0^2 (0.145) + 6090.1^2 (0.13971) + 2809.2^2 (0.71529) - 13.88^2 \\\\ = 20 305 469 = 4506.2^2"
+              },
+              {
+                "step": "Under Scenario 2 we have \\\\ L_{0,j}|Sc.2 = \\begin{cases} 8085.0 & \\text{w.p. } 0.14500 \\\\ 5925.3 & \\text{w.p. } 0.13971 \\\\ -2809.2 & \\text{w.p. } 0.71529 \\end{cases}"
+              },
+              {
+                "step": "which gives \\\\ E[L_{0,j}|Sc.2] = -9.25"
+              },
+              {
+                "step": "Var[L_{0,j}|Sc.2] = 20 027 618 = 4475.2^2"
+              }
+            ],
+            "final_answer": {
+              "value": "E[L_{0,j}|Sc.1] = 13.88, \\\\ Var[L_{0,j}|Sc.1] = 4506.2^2, \\\\ E[L_{0,j}|Sc.2] = -9.25, \\\\ Var[L_{0,j}|Sc.2] = 4475.2^2"
+            }
+          },
+          {
+            "part_id": "c",
+            "step_by_step_guide": [
+              {
+                "step": "Let Sc denote the unknown interest rate scenario, either Scenario 1 or Scenario 2. Then \\\\ L|Sc = \\sum_{j=1}^N L_{0,j}|Sc \\Rightarrow E[L|Sc] = NE[L_{0,j}|Sc] \\\\ and \\\\ Var[L|Sc] = NVar[L_{0,j}|Sc]"
+              },
+              {
+                "step": "Using iterated expectation, \\\\ E[L] = E\\left[E[L|Sc]\\right] = NE[L_{0,j}]"
+              },
+              {
+                "step": "Var[L] = E\\left[Var[L|Sc]\\right] + Var\\left[E[L|Sc]\\right]"
+              },
+              {
+                "step": "Now \\\\ E[L|Sc] = \\begin{cases} 13.88N & \\text{w.p. } 0.4 \\\\ -9.25N & \\text{w.p. } 0.6 \\end{cases}"
+              },
+              {
+                "step": "Var[L|Sc] = \\begin{cases} 4506.2^2N & \\text{w.p. } 0.4 \\\\ 4475.2^2N & \\text{w.p. } 0.6 \\end{cases}"
+              },
+              {
+                "step": "So we have \\\\ E\\left[Var[L|Sc]\\right] = N \\left(0.4(4506.2^2) + 0.6(4475.2^2)\\right) = 4487.6^2 N"
+              },
+              {
+                "step": "Var\\left[E[L|Sc]\\right] = 0.4(13.88^2N^2) + 0.6(-9.25^2N^2) - E[L]^2"
+              },
+              {
+                "step": "where E[L] = 0.4(13.88N) + 0.6(-9.25N) = 0"
+              },
+              {
+                "step": "=> Var\\left[E[L|Sc]\\right] = 128.4N^2"
+              },
+              {
+                "step": "=> Var[L] = 4487.6^2N + 128.4N^2"
+              }
+            ],
+            "final_answer": {
+              "value": "Var[L] = 4487.6^2N + 128.4N^2"
+            }
+          },
+          {
+            "part_id": "d",
+            "step_by_step_guide": [
+              {
+                "step": "The risk is diversifiable if and only if \\\\ \\lim_{N \\to \\infty} \\frac{\\sqrt{Var[L]}}{N} = 0"
+              },
+              {
+                "step": "In this case we have \\\\ \\lim_{N \\to \\infty} \\frac{\\sqrt{Var[L]}}{N} = \\lim_{N \\to \\infty} \\frac{\\sqrt{4487.6^2N + 128.4N^2}}{N}"
+              },
+              {
+                "step": "= \\lim_{N \\to \\infty} \\sqrt{\\frac{4487.6^2N + 128.4N^2}{N^2}}"
+              },
+              {
+                "step": "= \\lim_{N \\to \\infty} \\sqrt{4487.6^2 \\frac{N}{N^2} + 128.4 \\frac{N^2}{N^2}}"
+              },
+              {
+                "step": "= \\sqrt{128.4} = 11.3 \\neq 0"
+              },
+              {
+                "step": "Hence, the risk is not diversifiable."
+              }
+            ],
+            "final_answer": {
+              "value": "The risk is not diversifiable."
+            }
+          },
+          {
+            "part_id": "e",
+            "step_by_step_guide": [
+              {
+                "step": "The risk is not diversifiable because the interest scenario applies to all policies identically; all policies experience the same interest rate scenario. It is not diversified by increasing the number of policies."
+              }
+            ],
+            "final_answer": {
+              "value": "The risk is not diversifiable because the interest scenario applies to all policies identically; all policies experience the same interest rate scenario. It is not diversified by increasing the number of policies."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "question": {
+        "question_id": "3",
+        "question_type": "Written answer",
+        "parts": [
+          {
+            "part_id": "a",
+            "given_data": [
+              {
+                "statement": "The benefit for death of an active employee is 100,000. The benefit for disability of an active employee is 50,000. There are no other benefits."
+              },
+              {
+                "statement": "Benefits are payable as a lump sum at the end of the year of the event."
+              },
+              {
+                "statement": "Decrements follow the Illustrative Service Table, with d, w, and i representing death, withdrawal, and disability, respectively."
+              },
+              {
+                "statement": "i = 0.08"
+              }
+            ],
+            "problem_statement": "Show that the EPV of benefits for Gary for the first three years is 500 to the nearest 100. You should calculate the EPV to the nearest 1."
+          },
+          {
+            "part_id": "b",
+            "given_data": [],
+            "problem_statement": "Calculate the EPV of benefits for Gary for the first three years."
+          },
+          {
+            "part_id": "c",
+            "given_data": [],
+            "problem_statement": "(i) Show that \\( \\mu_{35}^{(r)} = 0.06 \\) to the nearest 0.01. You should calculate \\( \\mu_{35}^{(r)} \\) to the nearest 0.0001. (ii) Calculate \\( \\mu_{35}^{(d)} \\) and \\( \\mu_{35}^{(i)} \\)."
+          },
+          {
+            "part_id": "d",
+            "given_data": [],
+            "problem_statement": "Calculate the EPV of benefits for Gary in the first year."
+          },
+          {
+            "part_id": "e",
+            "given_data": [
+              {
+                "statement": "The force of mortality for disabled lives, \\( \\mu_x \\), is 0.5, for all attained ages \\( x \\)."
+              },
+              {
+                "statement": "Mortality is the only decrement for disabled lives."
+              }
+            ],
+            "problem_statement": "Calculate the EPV of this additional death benefit for an active life currently age 35."
+          }
+        ]
+      },
+      "solution": {
+        "parts": [
+          {
+            "part_id": "a",
+            "step_by_step_guide": [
+              {
+                "step": "\\[EPV = 100,000 \\left( \\frac{d_{35}^{(d)}v + d_{36}^{(d)}v^2 + d_{37}^{(d)}v^3}{l_{35}} \\right) + 50,000 \\left( \\frac{d_{35}^{(i)}v + d_{36}^{(i)}v^2 + d_{37}^{(i)}v^3}{l_{35}} \\right) \\]"
+              },
+              {
+                "step": "\\[ = 100,000 \\left( \\frac{64v + 64v^2 + 65v^3}{45,730} \\right) + 50,000 \\left( \\frac{46v + 43v^2 + 45v^3}{45,730} \\right) \\]"
+              },
+              {
+                "step": "\\[ = 362.40 + 125.94 = 488.34 \\]"
+              }
+            ],
+            "final_answer": {
+              "value": "488.34"
+            }
+          },
+          {
+            "part_id": "b",
+            "step_by_step_guide": [
+              {
+                "step": "Use the result from part (a) and then calculate \\(\\text{EPV} = 488.34 \\frac{i}{\\delta}\\)."
+              },
+              {
+                "step": "Calculate \\(\\delta = \\ln(1 + i)\\)."
+              },
+              {
+                "step": "Substitute the values to get the final answer."
+              }
+            ],
+            "final_answer": {
+              "value": "507.62"
+            }
+          },
+          {
+            "part_id": "c",
+            "step_by_step_guide": [
+              {
+                "step": "\\[ p_{35}^{(r)} = \\frac{42,927}{45,730} = 0.93870 \\]"
+              },
+              {
+                "step": "Calculate \\(\\mu_{35}^{(r)} = -\\ln(0.93870) = 0.06325\\)."
+              },
+              {
+                "step": "Calculate \\(\\mu_{35}^{(r)} = 0.06325\\) using force of mortality."
+              }
+            ],
+            "final_answer": {
+              "value": ""
+            }
+          },
+          {
+            "part_id": "d",
+            "step_by_step_guide": [
+              {
+                "step": "\\[ EPV_{DB} = 100,000 \\int_0^1 v^t p_{35+t}^{(r)} \\mu_{35+t}^{(d)} e^{-\\delta t} dt \\]"
+              },
+              {
+                "step": "Integrate the expression."
+              },
+              {
+                "step": "Get the final value."
+              }
+            ],
+            "final_answer": {
+              "value": "183.18"
+            }
+          },
+          {
+            "part_id": "e",
+            "step_by_step_guide": [
+              {
+                "step": "Compute the integral involving force of mortality."
+              },
+              {
+                "step": "Use the constant force of mortality for calculation."
+              },
+              {
+                "step": "Use the value of extra DB after disability to calculate the final answer."
+              }
+            ],
+            "final_answer": {
+              "value": "28.73"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "question": {
+        "question_id": "4",
+        "question_type": "Written answer",
+        "parts": [
+          {
+            "part_id": "a",
+            "given_data": [
+              {
+                "statement": "For a special fully discrete 3-year term insurance issued to [77], you are given: \\( q_{[x]} \\)"
+              }
+            ],
+            "problem_statement": "Show that \\( P \\) equals 12,840 to the nearest 10. You should calculate \\( P \\) to the nearest 1."
+          },
+          {
+            "part_id": "b",
+            "given_data": [
+              {
+                "statement": "Calculate the probability that \\( L_0 > 0 \\)."
+              }
+            ],
+            "problem_statement": "Calculate the probability that \\( L_0 > 0 \\)."
+          },
+          {
+            "part_id": "c",
+            "given_data": [
+              {
+                "statement": "Show that the standard deviation of \\( L_0 \\) is 105,000 to the nearest 5000. You should calculate the standard deviation to the nearest 1000."
+              }
+            ],
+            "problem_statement": "Show that the standard deviation of \\( L_0 \\) is 105,000 to the nearest 5000. You should calculate the standard deviation to the nearest 1000."
+          },
+          {
+            "part_id": "d",
+            "given_data": [
+              {
+                "statement": "The MRH Life Insurance Company (MRH) sells 8000 of these policies to lives, all select lives age 77, who are assumed to have independent future lifetimes. \\( L \\) is the aggregate loss-at-issue random variable for these 8000 policies. Using the normal approximation, calculate the 90th percentile of \\( L \\)."
+              }
+            ],
+            "problem_statement": "The MRH Life Insurance Company (MRH) sells 8000 of these policies to lives, all select lives age 77, who are assumed to have independent future lifetimes. \\( L \\) is the aggregate loss-at-issue random variable for these 8000 policies. Using the normal approximation, calculate the 90th percentile of \\( L \\)."
+          },
+          {
+            "part_id": "e",
+            "given_data": [
+              {
+                "statement": "MRH discovers that 7200 individuals purchased the 8000 policies, where 200 policyholders have each purchased 5 policies, while the remaining 7000 policyholders have each purchased a single policy. \\( L^* \\) is the aggregate loss-at-issue random variable for these 8000 policies. Using the normal approximation, calculate the 90th percentile of \\( L^* \\)."
+              }
+            ],
+            "problem_statement": "MRH discovers that 7200 individuals purchased the 8000 policies, where 200 policyholders have each purchased 5 policies, while the remaining 7000 policyholders have each purchased a single policy. \\( L^* \\) is the aggregate loss-at-issue random variable for these 8000 policies. Using the normal approximation, calculate the 90th percentile of \\( L^* \\)."
+          },
+          {
+            "part_id": "f",
+            "given_data": [
+              {
+                "statement": "Briefly explain why the values of the 90th percentiles of \\( L \\) and \\( L^* \\) differ."
+              }
+            ],
+            "problem_statement": "Briefly explain why the values of the 90th percentiles of \\( L \\) and \\( L^* \\) differ."
+          }
+        ]
+      },
+      "solution": {
+        "parts": [
+          {
+            "part_id": "a",
+            "step_by_step_guide": [
+              {
+                "step": "Calculate the present value of benefits (PVFB): \\( PVFB = 500q_{[77]} v + 300 q_{[77]}q_{78}v^2 + 100 q_{[77]}q_{78}q_{79}v^3 \\)"
+              },
+              {
+                "step": "Calculate the present value of premiums (PVFP): \\( PVFP = P (1 + pv + 2Pv_{77}q_{[77]}q_{78}v^2) \\)"
+              },
+              {
+                "step": "Solve for \\( P \\) using the equivalence principle: \\( P = \\frac{500q_{[77]} v + 300 q_{[77]}q_{78}v^2 + 100 q_{[77]}q_{78}q_{79}v^3}{1 + pv + 2P_{78}v^2} = 35.245 / 2.7444 = 12842.7 \\)"
+              }
+            ],
+            "final_answer": {
+              "value": "12,843 to the nearest $1"
+            }
+          },
+          {
+            "part_id": "b",
+            "step_by_step_guide": [
+              {
+                "step": "Calculate \\( L \\) to determine if it will be greater than zero if life dies during the term."
+              },
+              {
+                "step": "Check: death in third year gives \\( L = 100v^3 - P(1 + v + v^2) = 49.104 \\)"
+              },
+              {
+                "step": "Calculate the probability: \\( q_{[77]} = 1 - q_{[77]} = 1 - 0.97 * 0.94 * 0.933 = 0.14930 \\)"
+              }
+            ],
+            "final_answer": {
+              "value": "0.14930"
+            }
+          },
+          {
+            "part_id": "c",
+            "step_by_step_guide": [
+              {
+                "step": "Calculate \\( L_0 \\): \\( L_0 = \\begin{cases} 500v - P & w.p. \\ q_{[77]} \\\\ 300v^2 - P(1 + v) & w.p. \\ q_{[77]} * q_{78} \\\\ 100v^3 - P(1 + v + v^2) & w.p. \\ q_{[77]} * q_{78} * q_{79} \\\\ -P(1 + v + v^2) & w.p. \\ 3q_{[77]} \\\\ \\end{cases} \\)"
+              },
+              {
+                "step": "Use equivalence principle to know \\( E[L_0] = 0 \\)"
+              },
+              {
+                "step": "Calculate Standard Deviation: \\( SD[L_0] = \\sqrt{\\text{Var}[L_0]} = \\sqrt{11, 210.3} = 105.879 \\)"
+              }
+            ],
+            "final_answer": {
+              "value": "106,000 to the nearest 1000"
+            }
+          },
+          {
+            "part_id": "d",
+            "step_by_step_guide": [
+              {
+                "step": "Calculate \\( E[L] = 0 \\)"
+              },
+              {
+                "step": "Calculate \\( \\text{Var}{L} = 8000 * \\text{Var}{L_0} = 89,683,000 \\)"
+              },
+              {
+                "step": "Calculate \\( SD[L] = \\sqrt{89,683,000} = 9,470.1 \\)"
+              }
+            ],
+            "final_answer": {
+              "value": "12,141 million"
+            }
+          },
+          {
+            "part_id": "e",
+            "step_by_step_guide": [
+              {
+                "step": "Let \\( L^*_m_0 \\) denote the random loss at issue variable for each multiple policy. \\( E_{[L^*_m_0]} = 0 \\)"
+              },
+              {
+                "step": "Calculate \\( \\text{Var}{L^*_m_0} = 5^2 \\text{Var} = 280,252 \\)"
+              },
+              {
+                "step": "Calculate \\( \\text{Var}[L*] = 7000 * \\text{Var}{L_0} + 200 \\text{Var}{Lm_0} = 11,598^2 \\)"
+              },
+              {
+                "step": "Calculate revised 90th percentile estimate: \\( 1.282 * 11,598 = 14,869 \\)"
+              }
+            ],
+            "final_answer": {
+              "value": "14,869 million"
+            }
+          },
+          {
+            "part_id": "f",
+            "step_by_step_guide": [
+              {
+                "step": "Explain the difference: \\( L^* \\) is less diversified than \\( L \\), with the same total sum insured spread around fewer policyholders. Since diversification reduces the relative uncertainty, less diversification means greater uncertainty, as confirmed by the larger 90th percentile."
+              }
+            ],
+            "final_answer": {
+              "value": "L^* is less diversified than L, with the same total sum insured spread around fewer policyholders. Since diversification reduces the relative uncertainty, less diversification means greater uncertainty, as confirmed by the larger 90th percentile."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "question": {
+        "question_id": "5",
+        "question_type": "Written answer",
+        "parts": [
+          {
+            "part_id": "a",
+            "given_data": [
+              {
+                "statement": "Show that the Full Preliminary Term reserve at the end of year 2 is 100 to the nearest 10. You should calculate the reserve to the nearest 1."
+              },
+              {
+                "statement": "You started with a tentative premium of 2200. Your resulting profit vector was (-660, 115, Pr_2, 340)."
+              }
+            ],
+            "problem_statement": "Calculate the reserve at the end of year 2."
+          },
+          {
+            "part_id": "b",
+            "given_data": [
+              {
+                "statement": "Show that Pr_2, the expected profit in year 2 per policy inforce at the start of year 2, is 210 to the nearest 10. You should calculate the expected profit to the nearest 1."
+              }
+            ],
+            "problem_statement": "Calculate the expected profit in year 2."
+          },
+          {
+            "part_id": "c",
+            "given_data": [
+              {
+                "statement": "Calculate the net present value (NPV) of this insurance policy."
+              }
+            ],
+            "problem_statement": "Calculate the NPV of the insurance policy."
+          },
+          {
+            "part_id": "d",
+            "given_data": [
+              {
+                "statement": "Pr^*_1 is the expected profit in year 1 per policy in force at the start of year 1, based on a gross premium of G. It is possible to express Pr^*_1 as k(G - 2200) + Pr_1, where:"
+              },
+              {
+                "statement": "(i) k is a constant"
+              },
+              {
+                "statement": "(ii) G is the gross premium for the policy"
+              },
+              {
+                "statement": "(iii) Pr_1 is the expected profit in year 1 per policy in force at the start of year 1, based on a gross premium of 2200"
+              }
+            ],
+            "problem_statement": "Show that k is 0.5 to the nearest 0.1. You should calculate k to the nearest 0.001."
+          },
+          {
+            "part_id": "e",
+            "given_data": [
+              {
+                "statement": "Calculate the gross premium, G, such that the NPV is 100."
+              }
+            ],
+            "problem_statement": "Calculate G."
+          },
+          {
+            "part_id": "f",
+            "given_data": [
+              {
+                "statement": "If the pre-contract expenses increase by 10% of the premium and the commissions at the start of year 1 decrease by 10% of the premium, state whether the NPV will increase, decrease, or remain unchanged. Justify your answer. A numerical calculation of the change is not required."
+              }
+            ],
+            "problem_statement": "Analyze the change in NPV."
+          }
+        ]
+      },
+      "solution": {
+        "parts": [
+          {
+            "part_id": "a",
+            "step_by_step_guide": [
+              {
+                "step": "Calculate the Full Preliminary Term reserve (P^*) using the formula P^* = 100000q_{T2}v - Pr where v is the discount factor. Calculate q_{T2} and identify all relevant terms."
+              },
+              {
+                "step": "P^* = 100000q_{T2}v - P^* where P^* = 100000q_{T1}v + Pr_1q_{T2}v^2 / 1 + Pr_1v."
+              },
+              {
+                "step": "Simplify and solve for v and v^2..."
+              }
+            ],
+            "final_answer": {
+              "value": "98.23"
+            }
+          },
+          {
+            "part_id": "b",
+            "step_by_step_guide": [
+              {
+                "step": "Calculate Pr_2 using the given profit vector and assumptions: Pr_2 = 2200 * 0.9 * 1.06 - 0.018(100000) - (1 - 0.018 - 0.1) * 2V^{FPT}."
+              }
+            ],
+            "final_answer": {
+              "value": "212.16"
+            }
+          },
+          {
+            "part_id": "c",
+            "step_by_step_guide": [
+              {
+                "step": "Compute NP using the profit vector values: NPV = -660 + 115v_{10%}^1 + 212.16p_{T0}v_{10%}^2 + 340p_{T0}^2v_{10%}^3."
+              }
+            ],
+            "final_answer": {
+              "value": "-226.9"
+            }
+          },
+          {
+            "part_id": "d",
+            "step_by_step_guide": [
+              {
+                "step": "Express Pr_1^* using k and solve for k: Pr_1^* = k(G-2200) + Pr_1 (given). Calculate values based on guidance k values for different G..."
+              }
+            ],
+            "final_answer": {
+              "value": "0.5088(G - 2200) + Pr_1"
+            }
+          },
+          {
+            "part_id": "e",
+            "step_by_step_guide": [
+              {
+                "step": "Express all values in Pr_t definitions and solve for D: Pr^*_t in terms of Pr. "
+              },
+              {
+                "step": "NPV* = 1.385D G = 2436"
+              }
+            ],
+            "final_answer": {
+              "value": "G = 2436."
+            }
+          },
+          {
+            "part_id": "f",
+            "step_by_step_guide": [
+              {
+                "step": "State total expenses remain constant, pre-contract shift effect on NPV analysis. For pre-contract expenses allow interest at 6% then discount at 10%. For pre-contract expenses there is no interest or discounting."
+              }
+            ],
+            "final_answer": {
+              "value": "NPV decreases."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "question": {
+        "question_id": "6",
+        "question_type": "Written answer",
+        "parts": [
+          {
+            "part_id": "a",
+            "given_data": [
+              {
+                "statement": ""
+              }
+            ],
+            "problem_statement": "Briefly describe the difference between the traditional unit credit and projected unit credit funding methods. Include in your description an example (numerical or verbal) of how each method treats salaries at valuation time $t$ for a final average defined benefit plan for determining the value of the liabilities at time $t$."
+          },
+          {
+            "part_id": "b",
+            "given_data": [
+              {
+                "statement": ""
+              }
+            ],
+            "problem_statement": "Calculate the total normal contributions for both Tom and Ken at January 1, 2016."
+          },
+          {
+            "part_id": "c",
+            "given_data": [
+              {
+                "statement": ""
+              }
+            ],
+            "problem_statement": "Following Tom\u2019s termination on December 31, 2016 the ABC Company announces that effective January 1, 2017 the following new flexible retirement benefit provisions will be put in place: \n - Ken will be able to take retirement at age 62 or age 65. \n - If Ken takes his retirement benefit at age 62 there will be an additional \u201cbridge\u201d benefit payable to the earlier of the date of death and age 65 equal to 15 per month for each year of service. \n - If Ken takes his retirement benefit at age 62 there will be an actuarial reduction of 21% that will apply to both his normal and additional \u201cbridge\u201d benefits. No reduction applies if Ken retires at age 65.\n - It is assumed that Ken has a 50% probability of taking his retirement at age 62 and a 50% probability that he will take it at age 65.\n You are also given:\n $\\bar{a}^{(12)}_{62} = 10.3$\n $\\bar{a}^{(12)}_{62:3} = 2.7$\n Calculate the total actuarial liability and normal contribution at January 1, 2017 for Ken based on the new plan provisions."
+          }
+        ]
+      },
+      "solution": {
+        "parts": [
+          {
+            "part_id": "a",
+            "step_by_step_guide": [
+              {
+                "step": "For both Traditional Unit Credit (TUC) and Projected Unit Credit (PUC) the valuation does not take into consideration any future service. For PUC, the valuation does allow for expected future salary increases to retirement. For TUC, the valuation does not allow for future salary increases, but uses the final average earnings calculation applied as at the valuation date."
+              },
+              {
+                "step": "Example: Consider a DB benefit based on final year\u2019s salary. For a current member with salary $S_x$ in the year of age x to x + 1, we would value the retirement benefit payable from age 65, say, under PUC using the final salary $S_{64}$."
+              },
+              {
+                "step": "For the TUC valuation, at age 35, say, we would use $S_{34}$."
+              }
+            ],
+            "final_answer": {
+              "value": ""
+            }
+          },
+          {
+            "part_id": "b",
+            "step_by_step_guide": [
+              {
+                "step": "For Tom, the Actuarial Liability at the valuation date ($AL_0$) is the sum of the EPV of the retirement benefit and the withdrawal benefit."
+              },
+              {
+                "step": {
+                  "math": "AL_0 = 2 * 65000 * (1.03)^{24} * 0.013 * 0.94 * v_{6.5\text{\textdegree}}^{25} * \\bar{a}^{(12)}_{65}\n + 2 * 65000 * 0.013 * 0.06 * v_{6.5\text{\textdegree}}^{25} * \\bar{a}^{(12)}_{65}\n = 6421.5 + 201.6 \n = 6623.1"
+                }
+              },
+              {
+                "step": "The EPV at the valuation date of the actuarial liability at time 1 allows for staying in the plan or the cost of withdrawal:"
+              },
+              {
+                "step": {
+                  "math": "3 * 65000 * (1.03)^{24} * 0.013 * 0.94 * v_{6.5\text{\textdegree}}^{25} * \\bar{a}^{(12)}_{65} \n + 3 * 65000 * 0.013 * 0.06 * v_{6.5\text{\textdegree}}^{25} * \\bar{a}^{(12)}_{65} \n = 9632.3 + 302.4 \n = 9934.7\n\nSo \\text{NC}^T = 9934.7 - 6623.1 = 3311.6.\n\nFor Ken the NC just one year\u2019s accrual."
+                }
+              },
+              {
+                "step": {
+                  "math": "AL_0 = 5 * 80000 * (1.03)^{14} * 0.013 * v_{6.5\text{\textdegree}}^{15} * \\bar{a}^{(12)}_{65} = 29359.7\n\n\\text{NC}^K = \\frac{29359.7}{5} = 5871.94"
+                }
+              }
+            ],
+            "final_answer": {
+              "value": ""
+            }
+          },
+          {
+            "part_id": "c",
+            "step_by_step_guide": [
+              {
+                "step": "The AL at 2017 of the normal retirement age benefit is"
+              },
+              {
+                "step": {
+                  "math": "0.5 * \\left( 6 * 80\\,000 * (1.03)^{14} * 0.013 * v_{6.5\text{\textdegree}}^{14} * \\bar{a}^{(12)}_{65} \\right) = 0.5(37521.7) = 18760.9"
+                }
+              },
+              {
+                "step": "The AL of the early retirement benefit is"
+              },
+              {
+                "step": {
+                  "math": "0.79 \\left\\{ 0.5 \\left( 6 * 80\\,000 * (1.03)^{11} * 0.013 * v_{6.5\text{\textdegree}}^{11} * \\bar{a}^{(12)}_{62} \\right)\n +0.5 \\left( 15 * 12 * 6 \\cdot (1.03)^{11} \\cdot 0.013 \\cdot v_{6.5\text{\textdegree}}^{11} \\cdot \\bar{a}^{(12)}_{62:3} \\right) \\right\\}\n = 0.79\\left(0.5(44502.6 + 1458.6)\\right) = 18154.7"
+                }
+              },
+              {
+                "step": "The AL of the total benefits is"
+              },
+              {
+                "step": {
+                  "math": "18760.9 + 18154.7 = 36915.5\nSince all the benefits are proportional to service , the NC is \\frac{AL}{6} = 6152.6."
+                }
+              }
+            ],
+            "final_answer": {
+              "value": ""
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1109 @@
+{
+  "exam_info": {
+    "exam_name": "Exam MLC",
+    "exam_year": "Fall 2016",
+    "exam_section": ""
+  },
+  "questions": [
+    {
+      "question": {
+        "question_id": "1",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For the country of Bienna, you are given:"
+          },
+          {
+            "statement": "(i) Bienna publishes mortality rates in biennial form, that is, mortality rates are of the form: \\( _2q_x \\), for \\( x = 0,1,2,... \\)"
+          },
+          {
+            "statement": "(ii) Deaths are assumed to be uniformly distributed between ages \\( 2x \\) and \\( 2x + 2 \\), for \\( x = 0,1,2,... \\)"
+          },
+          {
+            "statement": "(iii) \\( _2q_{50} = 0.02 \\)"
+          },
+          {
+            "statement": "(iv) \\( _2q_{52} = 0.04 \\)"
+          },
+          {
+            "statement": "Calculate the probability that (50) dies during the next 2.5 years."
+          }
+        ],
+        "problem_statement": "",
+        "options": {
+          "A": "0.02",
+          "B": "0.03",
+          "C": "0.04",
+          "D": "0.05",
+          "E": "0.06"
+        }
+      },
+      "solution": {
+        "formula": "\\(^2.5q_{50} = {_2q_{50}} + {_2p_{50}} \\cdot {0.5 \\cdot {_2q_{52}}}\\)",
+        "step_by_step_guide": [
+          {
+            "step": "\\({_2q_{50}} = 0.02\\)"
+          },
+          {
+            "step": "\\({_2p_{50}} = (1 - {_2q_{50}}) = (1 - 0.02) = 0.98\\)"
+          },
+          {
+            "step": "\\(0.5({_2q_{52}}) = 0.5 \\cdot 0.04 = 0.02\\)"
+          },
+          {
+            "step": "\\(^2.5q_{50} = 0.02 + (0.98)\\left(0.5 \\cdot 0.04\\right)\\)"
+          },
+          {
+            "step": "\\(^2.5q_{50} = 0.02 + (0.98)\\left(0.02\\right)\\)"
+          },
+          {
+            "step": "\\(^2.5q_{50} = 0.02 + 0.0196 = 0.0298\\)"
+          }
+        ],
+        "final_answer": {
+          "answer": "B",
+          "value": "0.0298"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "2",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "You are given the following survival function of a newborn:"
+          },
+          {
+            "statement": "$S_0(x) = \\begin{cases} 1 - \\frac{x}{250} & ,0 \\leq x < 40 \\\\ 1 - \\left(\\frac{x}{100}\\right)^2 & ,40 \\leq x \\leq 100 \\end{cases}$"
+          }
+        ],
+        "problem_statement": "Calculate the probability that (30) dies within the next 20 years.",
+        "options": {
+          "A": "0.13",
+          "B": "0.15",
+          "C": "0.17",
+          "D": "0.19",
+          "E": "0.21"
+        }
+      },
+      "solution": {
+        "formula": "$_{20}q_{30} = \\frac{S_0(30) - S_0(50)}{S_0(30)} = \\frac{\\frac{220}{250} - \\frac{3}{4}}{\\frac{220}{250}} = \\frac{440 - 375}{440} = \\frac{65}{440} = \\frac{13}{88} = 0.1477$",
+        "step_by_step_guide": [
+          {
+            "step": "Substitute the given survival function values into the formula for $_{20}q_{30}$."
+          },
+          {
+            "step": "Calculate $S_0(30) = 1 - \\frac{30}{250} = \\frac{220}{250}$."
+          },
+          {
+            "step": "Calculate $S_0(50) = 1 - \\left(\\frac{50}{100}\\right)^2 = 1 - 0.25 = 0.75 = \\frac{3}{4}$."
+          },
+          {
+            "step": "Substitute $S_0(30)$ and $S_0(50)$ back into the formula and simplify."
+          }
+        ],
+        "final_answer": {
+          "answer": "B",
+          "value": "0.15"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "3",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "In a population initially consisting of 75% females and 25% males, you are given:"
+          },
+          {
+            "statement": "(i) For a female, the force of mortality is constant and equals \\( \\mu \\)."
+          },
+          {
+            "statement": "(ii) For a male, the force of mortality is constant and equals \\(1.5\\mu\\)."
+          },
+          {
+            "statement": "(iii) At the end of 20 years, the population consists of 85% females and 15% males."
+          }
+        ],
+        "problem_statement": "Calculate the probability that a female survives one year.",
+        "options": {
+          "A": "0.89",
+          "B": "0.92",
+          "C": "0.94",
+          "D": "0.96",
+          "E": "0.99"
+        }
+      },
+      "solution": {
+        "formula": "\\text{The 20-year female survival probability} = e^{-20\\mu} \\\\\n\\text{The 20-year male survival probability} = e^{-30\\mu}",
+        "step_by_step_guide": [
+          {
+            "step": "We want 1-year female survival = \\(e^{-\\mu}\\)"
+          },
+          {
+            "step": "Suppose that there were \\(M\\) males and \\(3M\\) females initially. After 20 years, there are expected to be \\(Me^{-30\\mu}\\) and \\(3Me^{-20\\mu}\\) survivors, respectively. At that time we have:"
+          },
+          {
+            "step": "\\[ \\frac{3Me^{-20\\mu}}{Me^{-30\\mu}} = \\frac{85}{15} \\Rightarrow e^{10\\mu} = \\frac{85}{45} = \\frac{17}{9} \\Rightarrow e^{-\\mu} = \\left(\\frac{9}{17}\\right)^{\\frac{1}{10}} \\approx 0.938 \\]"
+          }
+        ],
+        "final_answer": {
+          "answer": "C",
+          "value": "0.938"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "4",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a special whole life insurance on \\((x)\\), you are given:"
+          },
+          {
+            "statement": "(i) Death benefits are payable at the moment of death."
+          },
+          {
+            "statement": "(ii) The death benefit at time \\( t \\) is \\( b_t = e^{0.02t} \\), for \\( t \\geq 0 \\)."
+          },
+          {
+            "statement": "(iii) \\( \\mu_{x+t} = 0.04 \\), for \\( t \\geq 0 \\)."
+          },
+          {
+            "statement": "(iv) \\( \\delta = 0.06 \\)."
+          },
+          {
+            "statement": "(v) \\( Z \\) is the present value at issue random variable for this insurance."
+          },
+          {
+            "statement": "Calculate \\( \\text{Var}(Z) \\)."
+          }
+        ],
+        "problem_statement": "Calculate \\( \\text{Var}(Z) \\).",
+        "options": {
+          "A": "0.020",
+          "B": "0.036",
+          "C": "0.052",
+          "D": "0.068",
+          "E": "0.083"
+        }
+      },
+      "solution": {
+        "formula": "E[Z] = \\int_0^\\infty 0.04e^{-0.04t}\\left(e^{0.02t}\\right)e^{-0.06t}dt\n= \\int_0^\\infty 0.04e^{-0.08t}dt = \\frac{0.04}{0.08} = \\frac{1}{2}",
+        "step_by_step_guide": [
+          {
+            "step": "E[Z^2] = \\int_0^\\infty 0.04e^{-0.04t}\\left(e^{0.04t}\\right)e^{-0.12t}dt = \\frac{0.04}{0.12} = \\frac{1}{3}"
+          },
+          {
+            "step": "\\text{Var}[Z] = \\frac{1}{3} - \\left(\\frac{1}{2}\\right)^2 = \\frac{1}{12} = 0.0833"
+          }
+        ],
+        "final_answer": {
+          "answer": "E",
+          "value": "0.0833"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "5",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "You are given the following extract of ultimate mortality rates from a two-year select and ultimate mortality table:"
+          },
+          {
+            "statement": "\\[\\begin{array}{c|c} x & q_x \\\\ \\hline 50 & 0.045 \\\\ 51 & 0.050 \\\\ 52 & 0.055 \\\\ 53 & 0.060 \\end{array}\\]"
+          },
+          {
+            "statement": "The select mortality rates satisfy the following:"
+          },
+          {
+            "statement": "(i) \\[ q_{[x]} = 0.7q_x \\]"
+          },
+          {
+            "statement": "(ii) \\[ q_{[x]+1} = 0.8q_{x+1} \\]"
+          },
+          {
+            "statement": "You are also given that \\[ i = 0.04 \\]."
+          }
+        ],
+        "problem_statement": "Calculate \\[A_{[50]:2}^1\\].",
+        "options": {
+          "A": "0.08",
+          "B": "0.09",
+          "C": "0.10",
+          "D": "0.11",
+          "E": "0.12"
+        }
+      },
+      "solution": {
+        "formula": "\\[A_{[50]:3}^1 \\equiv v ( q_{[50]} + p_{[50]} v ( q_{[50]+1} + p_{[50]+1} v q_{52}))\\]",
+        "step_by_step_guide": [
+          {
+            "step": "\\[ v = \\frac{1}{1.04} \\]"
+          },
+          {
+            "step": "\\[ q_{[50]} = 0.7(0.045) = 0.0315 \\]"
+          },
+          {
+            "step": "\\[ p_{[50]} = 1 - q_{[50]} = 0.9685 \\]"
+          },
+          {
+            "step": "\\[ q_{[50]+1} = 0.8(0.050) = 0.040 \\]"
+          },
+          {
+            "step": "\\[ p_{[50]+1} = 1 - q_{[50]+1} = 0.960 \\]"
+          },
+          {
+            "step": "\\[ q_{52} = 0.055 \\]"
+          },
+          {
+            "step": "So: \\[ A_{[50]:3}^1 = 0.1116 \\]"
+          }
+        ],
+        "final_answer": {
+          "answer": "D",
+          "value": "0.1116"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "6",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a special fully discrete whole life policy on (48), you are given:"
+          },
+          {
+            "statement": "(i) The policy pays 5000 if the insured dies before his median curtate future lifetime at issue and 10,000 if he dies after his median curtate future lifetime at issue."
+          },
+          {
+            "statement": "(ii) Mortality follows the Illustrative Life Table."
+          },
+          {
+            "statement": "(iii) i = 0.06"
+          }
+        ],
+        "problem_statement": "Calculate the actuarial present value of benefits for this policy.",
+        "options": {
+          "A": "1420",
+          "B": "1450",
+          "C": "1480",
+          "D": "1510",
+          "E": "1540"
+        }
+      },
+      "solution": {
+        "formula": "APV = 5000 A_{48} + 5000_{30} E_{48} A_{78}",
+        "step_by_step_guide": [
+          {
+            "step": "The median of K_{48} is the integer m for which P(K_{48} < m) \u2264 0.5 and P(K_{48} > m) \u2264 0.5."
+          },
+          {
+            "step": "This is equivalent to finding m for which \\frac{l_{48+m}}{l_{48}} \u2265 0.5 and \\frac{l_{48+m+1}}{l_{48}} \u2264 0.5."
+          },
+          {
+            "step": "Based on the ILT, we have m = 30 since l_{78} \u2265 4,522,840 and l_{79} \u2264 4,522,840."
+          },
+          {
+            "step": "So: APV = 5000A_{48} + 5000_{30}E_{48}A_{78} = 5000(0.22892) + 5000(0.24193)(0.36044) = 1422.14"
+          }
+        ],
+        "final_answer": {
+          "answer": "A",
+          "value": "1420"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "7",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "(i) $AV_4 = 500$"
+          },
+          {
+            "statement": "(ii) The additional death benefit is 1,000,000."
+          },
+          {
+            "statement": "(iii) The COI rate in year 5 is 20 per 1000 of insurance."
+          },
+          {
+            "statement": "(iv) Expense charges are 500 per year plus 5% of premiums."
+          },
+          {
+            "statement": "(v) $i^{*} = 0.045$"
+          },
+          {
+            "statement": "(vi) The policy does not have a no-lapse guarantee."
+          }
+        ],
+        "problem_statement": "Calculate the minimum premium to be paid at the beginning of year 5 so that the policy does not lapse before the next premium is paid at the beginning of year 6.",
+        "options": {
+          "A": "20,150",
+          "B": "20,650",
+          "C": "21,150",
+          "D": "21,650",
+          "E": "22,150"
+        }
+      },
+      "solution": {
+        "formula": "AV_5 = 0 = \\left( AV_4 + 0.95P - 500 - \\frac{20,000}{1.045} \\right) (1.045) \\Rightarrow P = 20,146.06",
+        "step_by_step_guide": [
+          {
+            "step": "The minimum premium to prevent lapse will be the premium such that $AV_5 = 0$."
+          },
+          {
+            "step": "Let $P$ be this premium."
+          },
+          {
+            "step": "$AV_5 = 0 = \\left( AV_4 + 0.95P - 500 - \\frac{20,000}{1.045} \\right) (1.045)$."
+          },
+          {
+            "step": "Solving for $P$ gives $P = 20,146.06$."
+          }
+        ],
+        "final_answer": {
+          "answer": "A",
+          "value": "20,146.06"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "8",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a fully discrete whole life insurance policy of 1,000,000 on (50), you are given:"
+          },
+          {
+            "statement": "(i) The annual gross premium, calculated using the equivalence principle, is 19,526."
+          },
+          {
+            "statement": "(ii) Mortality follows the Illustrative Life Table."
+          },
+          {
+            "statement": "(iii) $i = 0.06$"
+          },
+          {
+            "statement": "Calculate the expense loading, $P^e$, for this policy."
+          }
+        ],
+        "problem_statement": "Calculate the expense loading, $P^e$, for this policy.",
+        "options": {
+          "A": "550",
+          "B": "650",
+          "C": "750",
+          "D": "850",
+          "E": "950"
+        }
+      },
+      "solution": {
+        "formula": "$EPV(\\text{NET PREMIUM}) + EPV(\\text{EXPENSE LOADING}) = \\text{GROSS PREMIUM}$",
+        "step_by_step_guide": [
+          {
+            "step": "So, $1,000,000 \\dfrac{\\, _{A} \\overline{\\ a}_{50}}  {\\, _{\\ddot{ a} }\\overline{\\ a}_{50}} + P^e = 19,526$"
+          },
+          {
+            "step": "So, $P^e = 753.76$"
+          }
+        ],
+        "final_answer": {
+          "answer": "C",
+          "value": "750"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "9",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "(i) \\( q_x = 0.01 \\)"
+          },
+          {
+            "statement": "(ii) \\( q_{x+1} = 0.02 \\)"
+          },
+          {
+            "statement": "(iii) \\( i = 0.05 \\)"
+          },
+          {
+            "statement": "(iv) The death benefit in the first year is 100,000."
+          },
+          {
+            "statement": "(v) Both the benefits and premiums increase by 1% in the second year."
+          }
+        ],
+        "problem_statement": "Calculate the annual net premium in the first year.",
+        "options": {
+          "A": "1410",
+          "B": "1417",
+          "C": "1424",
+          "D": "1431",
+          "E": "1438"
+        }
+      },
+      "solution": {
+        "formula": "P \\left[ \\frac{1.01}{1.05} + 0.99 \\right] = \\frac{10^5}{1.05} \\left( 0.01 + \\frac{0.99}{1.05} (1.01)(0.02) \\right) \\Rightarrow P = 1416.93",
+        "step_by_step_guide": [
+          {
+            "step": "Let \\( P \\) be the net premium for year 1."
+          }
+        ],
+        "final_answer": {
+          "answer": "B",
+          "value": "1416.93"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "10",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a fully discrete 3-year endowment insurance of 1000 on \\( x \\), you are given:"
+          },
+          {
+            "statement": "\\( (i) \\quad \\mu_{x+t} = 0.06 \\,, \\text{ for } 0 \\le t \\le 3. \\)"
+          },
+          {
+            "statement": "\\( (ii) \\quad \\delta = 0.06 \\)"
+          },
+          {
+            "statement": "\\( (iii) \\quad \\text{The annual premium is 315.80.} \\)"
+          },
+          {
+            "statement": "\\( (iv) \\quad L_0 \\text{ is the present value random variable for the loss at issue for this insurance.} \\)"
+          }
+        ],
+        "problem_statement": "Calculate \\(\\Pr[L_0 > 0] \\).",
+        "options": {
+          "A": "0.03",
+          "B": "0.06",
+          "C": "0.08",
+          "D": "0.11",
+          "E": "0.15"
+        }
+      },
+      "solution": {
+        "formula": "\\Pr(\\text{death in year 1 or 2}) = 1 - e^{-2\\mu} = 0.113",
+        "step_by_step_guide": [
+          {
+            "step": "The policy is fully discrete, so all cash flows occur at the start or end of a year."
+          },
+          {
+            "step": "There is a loss if death occurs in year 1 or year 2, otherwise the policy was profitable."
+          }
+        ],
+        "final_answer": {
+          "answer": "D",
+          "value": "0.11"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "11",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a fully discrete, 5-payment 10-year term insurance of 200,000 on (30), you are given:"
+          },
+          {
+            "statement": "(i) Mortality follows the Illustrative Life Table."
+          },
+          {
+            "statement": "(ii) The following expenses are incurred at the beginning of each respective year:"
+          },
+          {
+            "statement": "       Year 1                             Years 2 - 10"
+          },
+          {
+            "statement": "Percent of Premium                 Per Policy                                Percent of Premium                 Per Policy"
+          },
+          {
+            "statement": "Taxes                   5%                              0                                                5%                              0"
+          },
+          {
+            "statement": "Commissions     30%                              0                                              10%                              0"
+          },
+          {
+            "statement": "Maintenance         0%                              8                                                0%                              4"
+          },
+          {
+            "statement": "(iii) $i = 0.06$"
+          },
+          {
+            "statement": "(iv) $\\"
+          },
+          {
+            "statement": "(v) $\\"
+          }
+        ],
+        "problem_statement": "Calculate the annual gross premium using the equivalence principle.",
+        "options": {
+          "A": "750",
+          "B": "780",
+          "C": "800",
+          "D": "820",
+          "E": "850"
+        }
+      },
+      "solution": {
+        "formula": "$APV (expenses) = 0.35G + 8 + 0.15G\\ddot{a}_{30:\bar 10} + 4 \\ddot{a}_{30:\bar{10}}$",
+        "step_by_step_guide": [
+          {
+            "step": "$APV (expenses) = 0.35G + 8 + 0.15G\\ddot{a}_{30:\bar{10}} + 4\\ddot{a}_{30:\bar{10}}$"
+          },
+          {
+            "step": "$= 0.20G + 4 + 0.15G\\ddot{a}_{30:\bar{10}} + 4\\ddot{a}_{30:\bar{10}}$"
+          },
+          {
+            "step": "$G\\ddot{a}_{30:\bar{10}} = 0.20G + 4 + 0.15G\\ddot{a}_{30:\bar{10}} + 4\\ddot{a}_{30:\bar{10}} + 200,000A_{30:\bar{10}}$"
+          },
+          {
+            "step": "$G = 0.85\\ddot{a}_{30:\bar{10}} - 0.20$"
+          },
+          {
+            "step": "$200,000A_{30:\bar{10}} = 200,000(A_{50} - 10E_{30}A_{40})$"
+          },
+          {
+            "step": "$= 200(102.48) - (200)(0.54733)(161.32)$"
+          },
+          {
+            "step": "$= 2836.94$"
+          },
+          {
+            "step": "$G = \\frac{2836.94 + 4 + 4(7.7465)}{0.85(4.4516) - 0.20}$"
+          },
+          {
+            "step": "$= \\frac{2871.926}{3.58386}$"
+          },
+          {
+            "step": "$= 801.35$"
+          }
+        ],
+        "final_answer": {
+          "answer": "C",
+          "value": "801.35"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "12",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a fully discrete whole life insurance policy of 100,000 on [55], a professional skydiver, you are given:"
+          },
+          {
+            "statement": "(i) Premiums are paid annually."
+          },
+          {
+            "statement": "(ii) Mortality follows a 2-year select and ultimate table"
+          },
+          {
+            "statement": "(iii) $i=0.04$"
+          },
+          {
+            "statement": "(iv) The following table of values for $A_{x|n}$:"
+          },
+          {
+            "statement": " $$\\begin{array}{cccc} x & A_{[x]} & A_{[x]+1} & A_{x+2} \\\\ \\hline 55 & 0.23 & 0.24 & 0.25 \\\\ 56 & 0.25 & 0.26 & 0.27 \\\\ 57 & 0.27 & 0.28 & 0.29 \\\\ 58 & 0.29 & 0.30 & 0.31 \\end{array}$$"
+          }
+        ],
+        "problem_statement": "Calculate the Full Preliminary Term reserve at time 3.",
+        "options": {
+          "A": "2700",
+          "B": "3950",
+          "C": "5200",
+          "D": "6450",
+          "E": "7800"
+        }
+      },
+      "solution": {
+        "formula": "$y^{FPT} = 100,000A_{[55]}^3 - 100,000P_{[55]+1\u2010} \\ddot{a}_{[55]+3}$",
+        "step_by_step_guide": [
+          {
+            "step": "$y^{FPT} = 100,000A_{58} - 100,000 \\frac{A_{[55]+1} - A_{[55]+1}}{d} \\ddot{a}_{58}$"
+          },
+          {
+            "step": "$y^{FPT} = 100,000 \\left(0.27 - \\frac{0.24 / 1- 0.24 - 0.27 / 0.04}{d}\\right)$"
+          }
+        ],
+        "final_answer": {
+          "answer": "B",
+          "value": "3947.37"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "13",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a special fully discrete 2-year endowment insurance on $(x)$, you are given:"
+          },
+          {
+            "statement": "(i) The death benefit for year $k$ is $25,000k$ plus the net premium reserve at the end of year $k$, for $k=1, 2$. For year 2, this net premium reserve is the net premium reserve just before the maturity benefit is paid."
+          },
+          {
+            "statement": "(ii) The maturity benefit is 50,000."
+          },
+          {
+            "statement": "$(iii)  p_x = p_{x+1} = 0.85$"
+          },
+          {
+            "statement": "$(iv)\\quad i = 0.05$"
+          },
+          {
+            "statement": "$(v)\\quad P$ is the level annual net premium."
+          }
+        ],
+        "problem_statement": "Calculate $P$.",
+        "options": {
+          "A": "27,650",
+          "B": "27,960",
+          "C": "28,200",
+          "D": "28,540",
+          "E": "28,730"
+        }
+      },
+      "solution": {
+        "formula": "",
+        "step_by_step_guide": [
+          {
+            "step": "$V' = (V + P)(1 + i) - (25,000 + V' - V)q_x$"
+          },
+          {
+            "step": "$V' = (V + P)(1 + i) - (50,000 + V' - V)q_{x+1} = 50,000$"
+          },
+          {
+            "step": "$((P(1 + i) - 25,000q_x) + P)(1 + i) - 50,000q_{x+1} = 50,000$"
+          },
+          {
+            "step": "$((P(1.05) - 25,000(0.15)) + P)(1.05) - 50,000(0.15) = 50,000$"
+          },
+          {
+            "step": "Solving for $P$, we get"
+          },
+          {
+            "step": "$P = \\frac{61,437.50}{2.1525} = 28,542.39$"
+          }
+        ],
+        "final_answer": {
+          "answer": "D",
+          "value": "28,540"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "14",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a Type A universal life policy with a death benefit of 50,000, you are given:"
+          },
+          {
+            "statement": "(i)"
+          },
+          {
+            "statement": "| Policy Year | Annual Premium | Percent of Premium Charge | Annual Fixed Expense Charge | Annual Cost of Insurance Rate Per 1000 | Interest Credited |"
+          },
+          {
+            "statement": "|-------------|----------------|---------------------------|------------------------------|---------------------------------------|------------------|"
+          },
+          {
+            "statement": "| 2 | 3000 | 7% | 10 | 3.0 | 5% |"
+          },
+          {
+            "statement": "(ii) The account value at the end of year 1 is 2233."
+          }
+        ],
+        "problem_statement": "Calculate the account value at the end of year 2.",
+        "options": {
+          "A": "5100",
+          "B": "5110",
+          "C": "5120",
+          "D": "5130",
+          "E": "5140"
+        }
+      },
+      "solution": {
+        "formula": "AV_2 = \\left(AV_1 + 3000(1 - 0.07) - 10\\right)(1.05) - \\frac{3.0}{1000}(50,000 - AV_2) \n5113.211 = 0.003 AV_2 \\\\ \\Rightarrow AV_2 = \\frac{5113.211}{0.997} = 5128.60",
+        "step_by_step_guide": [
+          {
+            "step": "Calculate the premium net of charge: P_{net} = 3000 (1 - 0.07) = 2790"
+          },
+          {
+            "step": "Subtract the fixed expense charge from the account value: AV_{1,net} = 2233 + 2790 - 10 = 5013"
+          },
+          {
+            "step": "Credit the interest: AV_{1,interest} = 5013 \\times 1.05 = 5263.65"
+          },
+          {
+            "step": "Calculate the insurance cost: C_{ins} = \\frac{3.0}{1000} \\times (50,000 - AV_2)"
+          },
+          {
+            "step": "Equate and solve for AV_2: 5263.65 - C_{ins} = AV_2 \\Rightarrow 5263.65 - 0.003 AV_2 = AV_2 \\Rightarrow 5263.65 = 1.003 AV_2 \\Rightarrow AV_2 = \\frac{5263.65}{1.003} = 5128.60"
+          }
+        ],
+        "final_answer": {
+          "answer": "C",
+          "value": "5128.60"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "15",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "For a 5-year term insurance policy on \\(x\\), you are given:"
+          },
+          {
+            "statement": "(i) The profit signature is \\(\\Pi = \\{-550, 300, 275, 75, 150, 100\\}\\)"
+          },
+          {
+            "statement": "(ii) The risk discount rate is 12\\%."
+          }
+        ],
+        "problem_statement": "Calculate the discounted payback period (DPP) for this policy.",
+        "options": {
+          "A": "1",
+          "B": "2",
+          "C": "3",
+          "D": "4",
+          "E": "5"
+        }
+      },
+      "solution": {
+        "formula": "\\text{DPP} = \\min \\{ t : \\text{NPV}(t) \\geq 0 \\}",
+        "step_by_step_guide": [
+          {
+            "step": "\\text{NPV}(0) = \\pi_0 = -550"
+          },
+          {
+            "step": "\\text{NPV}(1) = \\pi_0 + \\pi_1 v = -550 + \\frac{300}{1.12} = -282"
+          },
+          {
+            "step": "\\text{NPV}(2) = \\text{NPV}(1) + \\pi_2 v^2 = -282 + \\frac{275}{1.12^2} = -62.91"
+          },
+          {
+            "step": "\\text{NPV}(3) = \\text{NPV}(2) + \\pi_3 v^3 = -62.91 + \\frac{75}{1.12^3} = -9.53"
+          },
+          {
+            "step": "\\text{NPV}(4) = \\text{NPV}(3) + \\pi_4 v^4 = -9.53 + \\frac{150}{1.12^4} = 85.80"
+          },
+          {
+            "step": "\\text{NPV}(4) \\geq 0 \\Rightarrow \\text{DPP} = 4"
+          }
+        ],
+        "final_answer": {
+          "answer": "D",
+          "value": "4"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "16",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "XYZ Life Company issues 5,000 fully discrete whole life insurance policies of 10,000 to lives each age 50, with independent future lifetimes."
+          },
+          {
+            "statement": "(i) The annual gross premium is 220 per policy."
+          },
+          {
+            "statement": "(ii) Each policy is assumed to incur an expense of 30 at the beginning of each year."
+          },
+          {
+            "statement": "(iii) Gross premiums and reserves are calculated using $q_{53} = 0.0068$ and $i = 5\\%$."
+          },
+          {
+            "statement": "(iv) At the end of the third policy year:"
+          },
+          {
+            "statement": "    \u2022 The gross premium reserve per policy is 505"
+          },
+          {
+            "statement": "    \u2022 There are 4,885 policies in force"
+          },
+          {
+            "statement": "(v) During the fourth policy year:"
+          },
+          {
+            "statement": "    \u2022 The actual expense incurred per policy was 34"
+          },
+          {
+            "statement": "    \u2022 There were a total of 42 actual deaths"
+          },
+          {
+            "statement": "    \u2022 The earned interest rate was 6\\%"
+          }
+        ],
+        "problem_statement": "Calculate the profit for the fourth policy year.",
+        "options": {
+          "A": "-97,000",
+          "B": "-83,000",
+          "C": "-69,000",
+          "D": "-55,000",
+          "E": "-41,000"
+        }
+      },
+      "solution": {
+        "formula": "$\\overline{V}_4 = \\frac{(505 + 220 - 30)(1.05) - 10,000q_{53}}{1 - q_{53}} = 666.2807$",
+        "step_by_step_guide": [
+          {
+            "step": "The profit for policy year 4 is "
+          },
+          {
+            "step": "4,885 [ (505 + 220 - 30)(0.01) + (30 - 34)(1.06) + (10,000 - 666.2807)(0.0068 - \\frac{42}{4885})]"
+          },
+          {
+            "step": "= -68,730.37"
+          }
+        ],
+        "final_answer": {
+          "answer": "C",
+          "value": "-69,000"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "17",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "1000\bar{P}_{x:\bar{5}|} = 187.00"
+          },
+          {
+            "statement": "The expense reserve at the end of the first year, \bar{V}^e = -38.70"
+          },
+          {
+            "statement": "q_x = 0.008"
+          },
+          {
+            "statement": "Expenses, payable at the beginning of the year, are:"
+          },
+          {
+            "statement": "Year\n  Percent of Premium\n  Per Policy\n  First\n  25%\n  10\n  Renewal\n  5%\n  5"
+          },
+          {
+            "statement": "i = 0.03"
+          }
+        ],
+        "problem_statement": "Calculate G.",
+        "options": {
+          "A": "200",
+          "B": "213",
+          "C": "226",
+          "D": "239",
+          "E": "252"
+        }
+      },
+      "solution": {
+        "formula": "\\frac{\\bar{V}^e}{G-187-0.25G-10}(1.03) = -38.7 \\\\ \\bar{V}^e = -\\frac{38.7(0.992)}{1.03}",
+        "step_by_step_guide": [
+          {
+            "step": "\\bar{V}^e = -\\frac{G-187-0.25G-10}{0.992}(1.03) = -38.7"
+          },
+          {
+            "step": "\\Rightarrow 0.75G = 159.72"
+          },
+          {
+            "step": "\\Rightarrow G = 212.97"
+          }
+        ],
+        "final_answer": {
+          "answer": "B",
+          "value": "213"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "18",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "The member\u2019s current salary is 250,000, and there will be no future salary increases."
+          },
+          {
+            "statement": "The member\u2019s current retirement fund is 1,500,000 and there are no expected future contributions prior to retirement."
+          },
+          {
+            "statement": "The retirement fund grows at a rate of 8% annually."
+          },
+          {
+            "statement": "Upon retirement, the member will use her retirement fund as the single net premium for an annuity due that makes quarterly payments."
+          },
+          {
+            "statement": "The single net premium is calculated using the Illustrative Life Table and $i = 0.06$."
+          }
+        ],
+        "problem_statement": "Calculate, using the 2-term Woolhouse approximation, the member\u2019s replacement ratio upon retirement at age 66.",
+        "options": {
+          "A": "0.60",
+          "B": "0.63",
+          "C": "0.65",
+          "D": "0.68",
+          "E": "0.70"
+        }
+      },
+      "solution": {
+        "formula": "$X = 1,500,000(1.08) / \\tilde{a}_{66} ^ {(4)}= 1,620,000 / (9.6362 - \\frac{3}{8}) = 174,923.30$",
+        "step_by_step_guide": [
+          {
+            "step": "At age 66, the total retirement fund is $1,500,000(1.08)$ and it is to be used to purchase a quarterly annuity equal to $\\tilde{a}_{66} ^ {(4)}$."
+          },
+          {
+            "step": "So that: $X = \\frac{1,500,000(1.08)}{\\tilde{a}_{66} ^ {(4)}} = \\frac{1,620,000}{9.6362 - \\frac{3}{8}} = 174,923.30$"
+          },
+          {
+            "step": "Replacement Ratio = $\\frac{X}{250,000} = \\frac{174,923.30}{250,000} = 0.70$"
+          }
+        ],
+        "final_answer": {
+          "answer": "E",
+          "value": "0.70"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "19",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "Tim is a member of a defined benefit pension plan that provides its members, upon retirement at age 65, an annual pension payable monthly in advance equal to 2% of final salary per year of service. Final salary is defined to be the salary earned in the year immediately preceding retirement."
+          },
+          {
+            "statement": "Tim\u2019s salary throughout 2015 was 150,000, and he will not receive a salary increase in 2016. However, his salary will increase by 2% every January 1, starting at January 1, 2017."
+          },
+          {
+            "statement": "On the valuation date, January 1, 2016, Tim is age 45 with 10 years of past service."
+          },
+          {
+            "statement": "You are given:"
+          },
+          {
+            "statement": "(i) $i = 5%$"
+          },
+          {
+            "statement": "(ii) $\\,p_{45}^{(10)} = 0.99^t$, for $t \\leq 20$"
+          },
+          {
+            "statement": "(iii) $\\,a_{65}^{(12)} = 13.75$"
+          },
+          {
+            "statement": "(iv) There are no benefits other than retirement benefits."
+          }
+        ],
+        "problem_statement": "Calculate the normal contribution for Tim on the valuation date assuming a traditional unit credit funding method.",
+        "options": {
+          "A": "12,700",
+          "B": "14,000",
+          "C": "16,500",
+          "D": "18,900",
+          "E": "20,800"
+        }
+      },
+      "solution": {
+        "formula": "$\\ddot{\\text{V}} = (0.02)(10)(150,000)\\,\\overline{a}_{65}^{(12)} = 127,157.50$\\n$\\ddot{\\text{V}} = (0.02)(1)(150,000)\\,\\overline{a}_{65}^{(12)} = 12,715.75$",
+        "step_by_step_guide": [
+          {
+            "step": "No projected salary for traditional unit credit method:"
+          },
+          {
+            "step": "$\\ddot{V} = (0.02)(10)(150,000)\\,\\overline{a}_{65}^{(12)} = 127,157.50$"
+          },
+          {
+            "step": "$V = (0.02)(1)(150,000)\\,\\overline{a}_{65}^{(12)} = 12,715.75$"
+          },
+          {
+            "step": "Let C = normal contribution"
+          },
+          {
+            "step": "$\\ddot{V} + C = v_{45}V \\Rightarrow C = \\frac{1}{10} \\ddot{V} = 12,715.75$"
+          }
+        ],
+        "final_answer": {
+          "answer": "A",
+          "value": "12,715.75"
+        }
+      }
+    },
+    {
+      "question": {
+        "question_id": "20",
+        "question_type": "Multiple choice",
+        "given_data": [
+          {
+            "statement": "Kaitlyn entered a defined benefit plan on January 1, 1990 with a salary for 1990 of 50,000. You are given:"
+          },
+          {
+            "statement": "(i) The annual retirement benefit is 2% of the final 5-year average salary for each year of service."
+          },
+          {
+            "statement": "(ii) Her normal retirement date is December 31, 2023."
+          },
+          {
+            "statement": "(iii) The reduction in benefit for early retirement is 7% for each year prior to her normal retirement date."
+          },
+          {
+            "statement": "(iv) Every January 1, each employee receives a 2.5% increase in salary."
+          },
+          {
+            "statement": "(v) Kaitlyn retires on December 31, 2020."
+          }
+        ],
+        "problem_statement": "Calculate Kaitlyn's annual retirement benefit.",
+        "options": {
+          "A": "45,200",
+          "B": "46,100",
+          "C": "47,000",
+          "D": "48,900",
+          "E": "50,000"
+        }
+      },
+      "solution": {
+        "formula": "50,000 \\left( \\frac{1.025^{26} + 1.025^{27} + 1.025^{28} + 1.025^{29} + 1.025^{30}}{5} \\right) \\times 31 \\times \\left( 1 - 0.07(3) \\right) \\times (0.02)",
+        "step_by_step_guide": [
+          {
+            "step": "Calculate the final 5-year average salary by factoring in the 2.5% annual increase and averaging the last 5 years."
+          },
+          {
+            "step": "Calculate the total years of service, which is from 1990 to 2020, totaling 31 years."
+          },
+          {
+            "step": "Calculate the reduction factor for early retirement. Kaitlyn retires in 2020, which is 3 years prior to her normal retirement date in 2023. The reduction factor is 7% per year, so the total reduction is 3 * 7% = 21%."
+          },
+          {
+            "step": "Apply the formula to find the annual retirement benefit: 50,000 * (average salary with increase factor) * years of service * (1 - reduction factor) * benefit percentage."
+          }
+        ],
+        "final_answer": {
+          "answer": "D",
+          "value": "48,923.98"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+Extract the question and solution from the provided images and convert them into JSON format. Structure the output as follows:
+
+{
+  "exam_info": {
+    "exam_name": "Name of the exam",
+    "exam_year": "Year of the exam (if available)",
+    "exam_section": "Section of the exam (if applicable)"
+  },
+  "question": {
+    "question_id": "Question number or identifier",
+    "question_type": "Multiple choice or Written answer",
+    "given_data": [
+      {
+        "statement": "Any given data or conditions (use LaTeX for mathematical expressions). Non-bulleted information from the problem statement is still relevant and should be included here (especially text horizontally aligned with the problem number)."
+      },
+      {
+        "statement": "include as a new statement in the json structure each new bullet or paragraph break."
+      },
+    ],
+    "problem_statement": "The core question being asked",
+    "options": {
+      "A": "Option A text",
+      "B": "Option B text",
+      "C": "Option C text",
+      "D": "Option D text",
+      "E": "Option E text"
+    }
+  },
+  "solution": {
+    "formula": "The mathematical formula used (if any, in LaTeX)",
+    "step_by_step_guide": [
+      {
+        "step": "Explanation of each step in the solution"
+      }
+    ],
+    "final_answer": {
+      "answer": "The correct option letter",
+      "value": "The numerical or textual final answer"
+    }
+  }
+}
+
+Ensure all mathematical expressions are properly formatted in LaTeX. Provide only the JSON output without any additional text or explanations.

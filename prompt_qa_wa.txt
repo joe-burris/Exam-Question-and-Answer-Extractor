@@ -1,0 +1,114 @@
+Extract the question and solution from the provided images and convert them into JSON format. Structure the output as follows:
+
+{
+  "exam_info": {
+    "exam_name": "Name of the exam",
+    "exam_year": "Year of the exam (if available)",
+    "exam_section": "Section of the exam (if applicable)"
+  },
+  "question": {
+    "question_id": "Question number or identifier",
+    "question_type": "Written answer",
+    "parts": [
+      {
+        "part_id": "a", 
+        "given_data": [
+          {
+            "statement": "Any given data or conditions for part (a) (use LaTeX for mathematical expressions)."
+          }
+        ],
+        "problem_statement": "The specific question being asked in part (a)."
+      },
+      {
+        "part_id": "b",
+        "given_data": [
+          {
+            "statement": "Any given data or conditions for part (b) (use LaTeX for mathematical expressions)."
+          }
+        ],
+        "problem_statement": "The specific question being asked in part (b)."
+      },
+      {
+        "part_id": "c",
+        "given_data": [
+          {
+            "statement": "Any given data or conditions for part (c) (use LaTeX for mathematical expressions)."
+          }
+        ],
+        "problem_statement": "The specific question being asked in part (c)."
+      }
+    ]
+  },
+  "solution": {
+    "parts": [
+      {
+        "part_id": "a",
+        "step_by_step_guide": [
+          {
+            "step": "Explanation of the first step for solving part (a)."
+          },
+          {
+            "step": "Explanation of intermediate results or calculations for part (a)."
+          },
+          {
+            "step": "Explanation of final step for part (a)."
+          }
+        ],
+        "final_answer": {
+          "value": "The final answer for part (a)."
+        }
+      },
+      {
+        "part_id": "b",
+        "step_by_step_guide": [
+          {
+            "step": "Explanation of the first step for solving part (b)."
+          },
+          {
+            "step": "Explanation of intermediate results or calculations for part (b)."
+          },
+          {
+            "step": "Explanation of final step for part (b)."
+          }
+        ],
+        "final_answer": {
+          "value": "The final answer for part (b)."
+        }
+      },
+      {
+        "part_id": "c",
+        "step_by_step_guide": [
+          {
+            "step": "Explanation of the first step for solving part (c)."
+          },
+          {
+            "step": "Explanation of intermediate results or calculations for part (c)."
+          },
+          {
+            "step": "Explanation of final step for part (c)."
+          }
+        ],
+        "final_answer": {
+          "value": "The final answer for part (c)."
+        }
+      }
+    ]
+  },
+  
+}
+
+note: 
+    Be sure to include an answer at each part, even if that answer is only a mathematical expression and not a numeric value.
+    Ensure all mathematical expressions are properly formatted in LaTeX. Provide only the JSON output without any additional text or explanations.
+
+exam_info: Include the relevant information about the exam (name, year, and section if applicable).
+question:
+
+    question_id: Use the question number or identifier.
+    question_type: Set this to "Written answer".
+    parts: For each part (a, b, c, etc.), ensure that the given data and the problem statement are listed. Use LaTeX for any mathematical expressions.
+
+solution:
+
+    parts: For each part (a, b, c, etc.), include a step-by-step guide that explains the process to solve the part. This should also include intermediate results or calculations.
+    final_answer: Provide the final answer, which can either be a numerical value or a mathematical expression.
