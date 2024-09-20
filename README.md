@@ -51,19 +51,33 @@ The system generates two main output files:
 ## Project Structure
 .
 ├── main.py
+
 ├── pdf_processing.py
+
 ├── file_operations.py
+
 ├── openai_integration.py
+
 ├── question_bank_structuring.py
+
 ├── utils.py
+
 ├── qa_matching.py
+
 ├── prompt/
+
 │ ├── prompt_qa_mc.txt
+
 │ └── prompt_qa_wa.txt
+
 └── exams/
+
 ├── exam.pdf
+
 ├── mc_solutions.pdf
+
 ├── wa_solutions.pdf
+
 └── output/
 ├── mc_question_bank.json
 └── wa_question_bank.json
