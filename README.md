@@ -33,7 +33,8 @@ This project aims to automate the process of extracting questions and answers fr
 
 ## Setup and Usage
 
-[Instructions for setting up the project, including dependencies and API key configuration, would go here]
+Actuarial exam MLC can be found here:
+http://web.archive.org/web/20170624121139/https://www.soa.org/education/exam-req/syllabus-study-materials/edu-multiple-choice-exam.aspx
 
 ## Output
 
